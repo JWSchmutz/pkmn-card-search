@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <header id="search-bar">
+      <div class="basic-search-div">
+        <br />
+        Name: <input type="text" name="name" value="" id="name" /> <br />
+        <br />
+        <div>
+          Card Type:
+          <select id="card-type">
+            <option value="pokemon">Pokémon</option>
+            <option value="trainer">Trainer</option>
+            <option value="energy">Energy</option>
+          </select>
+        </div>
+        <div id="pokemon">
+          <br />
+          Sub Type:
+          <select id="pokemon-select">
+            <option value="all">All</option>
+            <option value="Basic">Basic</option>
+            <option value="Stage 1">Stage 1</option>
+            <option value="Stage 2">Stage 2</option>
+            <option value="GX">GX</option>
+            <option value="EX">EX</option>
+          </select>
+        </div>
+        <div id="trainer" class="removed">
+          <br />
+          Sub Type:
+          <select id="trainer-select">
+            <option value="all">All</option>
+            <option value="Supporter">Supporter</option>
+            <option value="Item">Item</option>
+            <option value="Stadium">Stadium</option>
+          </select>
+        </div>
+        <div class="removed" id="energy">
+          <br />
+          Sub Type:
+          <select id="energy-select">
+            <option value="All">All</option>
+            <option value="Basic">Basic</option>
+            <option value="Special">Special</option>
+          </select>
+        </div>
+      </div>
+      <div class="pokemon-fields">
+        <div id="pokemon-types">
+          <div class="first-row">
+            <img src="./images/normal.png" alt="colorless" class="type" />
+            <img src="./images/dragon.png" alt="dragon" class="type" />
+          </div>
+          <div class="other-rows">
+            <img src="./images/dark.png" alt="dark" class="type" />
+            <img src="./images/fairy.png" alt="fairy" class="type" />
+            <img src="./images/fighting.png" alt="fighting" class="type" />
+          </div>
+          <div class="other-rows">
+            <img src="./images/fire.png" alt="fire" class="type" />
+            <img src="./images/grass.png" alt="grass" class="type" />
+            <img src="./images/lightning.png" alt="lightning" class="type" />
+          </div>
+          <div class="other-rows">
+            <img src="./images/metal.png" alt="metal" class="type" />
+            <img src="./images/psychic.png" alt="psychic" class="type" />
+            <img src="./images/water.png" alt="water" class="type" />
+          </div>
+        </div>
+        <div class="other-fields">
+          <!-- HP at Least:
+          <select id="min-hp">
+            <option value="0">0</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+            <option value="110">110</option>
+            <option value="120">120</option>
+            <option value="130">130</option>
+            <option value="140">140</option>
+            <option value="150">150</option>
+            <option value="160">160</option>
+            <option value="170">170</option>
+            <option value="180">180</option>
+            <option value="190">190</option>
+            <option value="200">200</option>
+            <option value="210">210</option>
+            <option value="220">220</option>
+            <option value="230">230</option>
+            <option value="240">240</option>
+            <option value="250">250</option>
+            <option value="260">260</option>
+            <option value="270">270</option>
+            <option value="280">280</option>
+            <option value="290">290</option>
+            <option value="300">300</option>
+          </select>
+          <br /> -->
+          HP
+          <select id="max-or-min">
+            <option value="lte">at most</option>
+            <option value="gte">at least</option> </select
+          >:
+          <select id="max-hp">
+            <option value="300">300</option>
+            <option value="290">290</option>
+            <option value="280">280</option>
+            <option value="270">270</option>
+            <option value="260">260</option>
+            <option value="250">250</option>
+            <option value="240">240</option>
+            <option value="230">230</option>
+            <option value="220">220</option>
+            <option value="210">210</option>
+            <option value="200">200</option>
+            <option value="190">190</option>
+            <option value="180">180</option>
+            <option value="170">170</option>
+            <option value="160">160</option>
+            <option value="150">150</option>
+            <option value="140">140</option>
+            <option value="130">130</option>
+            <option value="120">120</option>
+            <option value="110">110</option>
+            <option value="100">100</option>
+            <option value="90">90</option>
+            <option value="80">80</option>
+            <option value="70">70</option>
+            <option value="60">60</option>
+            <option value="50">50</option>
+            <option value="40">40</option>
+            <option value="30">30</option>
+            <option value="20">20</option>
+            <option value="10">10</option>
+            <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-div">
+        Format:
+        <select id="format">
+          <option value="standard">Standard</option>
+          <!-- <option value="expanded">Expanded</option> -->
+          <option value="all">All</option>
+        </select>
+        <br />
+        <br />
+        <input type="submit" value="Search" id="search" />
+      </div>
+    </header>
+    <div class="main"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
