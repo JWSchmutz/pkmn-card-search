@@ -23,9 +23,8 @@ html {
   display: none;
 }
 
-.card:hover,
-.type:hover {
-  transform: scale(1.5) translateX(35px);
+.card:hover {
+  transform: scale(1.2) translateX(15px);
 }
 .card {
   transition: transform 0.2s;
