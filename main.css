@@ -1,6 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 html {
@@ -16,18 +29,25 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: lightgray;
+  background-color: #444;
+  border-radius: 15px;
+  opacity: 0.95;
 }
 
 .removed {
   display: none;
 }
 
-.card:hover {
-  transform: scale(1.2) translateX(15px);
-}
-.card {
-  transition: transform 0.2s;
+@media (min-width: 547px) {
+  .card:hover {
+    transform: scale(1.2);
+  }
+  .card {
+    transition: transform 0.2s;
+    width: 237px;
+    height: 335px;
+    margin: 10px;
+  }
 }
 
 .first-row {
@@ -44,6 +64,10 @@ html {
   width: 30px;
   height: 30px;
   margin: 2px;
+}
+
+#pokemon-types {
+  padding-top: 7px;
 }
 
 .selected {
@@ -71,5 +95,12 @@ html {
 @media (max-width: 750px) {
   #search-bar {
     height: 400px;
+  }
+}
+
+@media (max-width: 547px) {
+  .card {
+    width: 100%;
+    padding-top: 100%;
   }
 }
